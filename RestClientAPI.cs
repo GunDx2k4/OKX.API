@@ -34,7 +34,7 @@ namespace OKX.API
 
         public async Task<bool> CheckResponse()
         {
-            var data = await Account.GetBalance();
+            var data = await Account.GetBalanceAsync();
             return data.Data != null;
         }
     }

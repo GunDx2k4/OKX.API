@@ -14,7 +14,7 @@ namespace OKX.API.Account
         {
         }
 
-        public async Task<DataResponse<List<BalanceResponse>>> GetBalance(Currency currency = Currency.All)
+        public async Task<DataResponse<List<BalanceResponse>>> GetBalanceAsync(Currency currency = Currency.All)
         {
             if (currency != Currency.All)
             {
