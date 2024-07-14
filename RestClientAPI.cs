@@ -1,7 +1,6 @@
 ﻿using OKX.API.Account;
-using OKX.API.Account.Models;
 using OKX.API.Authentication;
-using OKX.API.Base.Models;
+using OKX.API.Market;
 using OKX.API.Public;
 
 namespace OKX.API
@@ -14,6 +13,7 @@ namespace OKX.API
 
         public PublicRestClient Public { get; private set; }
         public AccountRestClient Account { get; private set; }
+        public MarketRestClient Market { get; private set; }
 
         public RestClientAPI(string keyAPI, string secretKey, string passPhrase, bool isDemoTrading) : this(new CredentialsAPI(keyAPI, secretKey, passPhrase, isDemoTrading))
         {
@@ -30,6 +30,7 @@ namespace OKX.API
         {
             Public = new PublicRestClient(Credentials);
             Account = new AccountRestClient(Credentials);
+            Market = new MarketRestClient(Credentials);
         }
 
         public async Task<bool> CheckResponse()

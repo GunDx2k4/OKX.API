@@ -2,6 +2,8 @@
 {
     public class EndPointAPI
     {
-        public const string ACCOUNT_BALANCE = "api/v5/account/balance";
+        private const string BASE_ACCOUNT = "api/v5/account";
+
+        public const string ACCOUNT_BALANCE = $"{BASE_ACCOUNT}/balance";
     }
 }

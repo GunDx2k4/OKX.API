@@ -1,13 +1,15 @@
-﻿namespace OKX.API
+﻿using Newtonsoft.Json;
+
+namespace OKX.API
 {
     internal class Program
     {
         static async Task Main(string[] args)
         {
             var API = new RestClientAPI("keyAPI", "secretKey", "passPhrase", true);
-            var data = await API.CheckResponse();
+            var data = await API.Market.GetCandlesticksAsync("BTC-USDT");
 
-            Console.WriteLine("Connected API");
+            Console.WriteLine($"{JsonConvert.SerializeObject(data.Data)}");
         }
     }
 }
