@@ -2,7 +2,6 @@
 {
     public enum BarSizeCandlestick
     {
-        OneSecond,
         OneMinute,
         ThreeMinutes,
         FiveMinutes,

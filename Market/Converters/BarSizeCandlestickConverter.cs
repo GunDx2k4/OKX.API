@@ -11,7 +11,6 @@ namespace OKX.API.Market.Converters
         protected override List<KeyValuePair<BarSizeCandlestick, string>> Mapping =>
             new List<KeyValuePair<BarSizeCandlestick, string>>
             {
-                new KeyValuePair<BarSizeCandlestick, string>(BarSizeCandlestick.OneSecond, "1s"),
                 new KeyValuePair<BarSizeCandlestick, string>(BarSizeCandlestick.OneMinute, "1m"),
                 new KeyValuePair<BarSizeCandlestick, string>(BarSizeCandlestick.ThreeMinutes, "3m"),
                 new KeyValuePair<BarSizeCandlestick, string>(BarSizeCandlestick.FiveMinutes, "5m"),
