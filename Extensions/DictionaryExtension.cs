@@ -1,6 +1,6 @@
 ﻿namespace OKX.API.Extensions
 {
-    public static class DictionaryExtensions
+    public static class DictionaryExtension
     {
         public static void AddOptionalParameter(this Dictionary<string, string> parameters, string key, string value)
         {

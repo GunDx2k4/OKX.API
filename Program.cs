@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using OKX.API.Extensions;
 
 namespace OKX.API
 {
@@ -6,10 +7,10 @@ namespace OKX.API
     {
         static async Task Main(string[] args)
         {
-            var API = new RestClientAPI("keyAPI", "secretKey", "passPhrase", true);
+            var API = new RestClientAPI(true);
             var data = await API.Market.GetCandlesticksAsync("BTC-USDT");
 
-            Console.WriteLine($"{JsonConvert.SerializeObject(data.Data)}");
+            Console.WriteLine($"{JsonConvert.SerializeObject(data.Data[0].Open.ToOKXString())}");
         }
     }
 }

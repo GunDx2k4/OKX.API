@@ -15,6 +15,11 @@ namespace OKX.API
         public AccountRestClient Account { get; private set; }
         public MarketRestClient Market { get; private set; }
 
+        public RestClientAPI(bool isDemoTrading) : this(new CredentialsAPI("", "", "", isDemoTrading))
+        {
+
+        }
+
         public RestClientAPI(string keyAPI, string secretKey, string passPhrase, bool isDemoTrading) : this(new CredentialsAPI(keyAPI, secretKey, passPhrase, isDemoTrading))
         {
 
